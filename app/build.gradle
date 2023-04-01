@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.metamaskwalletdemo'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.metamaskwalletdemo"
         minSdk 25
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -30,8 +30,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
+//    buildFeatures {
+//        viewBinding true
+//    }
+    dataBinding{
+        enabled true
     }
 }
 
