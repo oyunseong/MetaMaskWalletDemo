@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Token_array">
+        <item>ETH</item>
+        <item>SNX</item>
+        <item>LINE</item>
+        <item>MKR</item>
+        <item>WBTC</item>
+    </string-array>
+
+</resources>

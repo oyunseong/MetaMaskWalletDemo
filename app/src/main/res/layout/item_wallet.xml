@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.example.metamaskwalletdemo.ui.main.BottomSheetWalletAdapter" />
+
+        <variable
+            name="wallet"
+            type="com.example.metamaskwalletdemo.model.Wallet" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackground"
+        android:onClick="@{()->adapter.onClick(wallet)}"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/walletImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/eth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/walletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{wallet.name}"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/walletImage"
+            app:layout_constraintTop_toTopOf="@id/walletImage" />
+
+        <TextView
+            android:id="@+id/tokenCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 ETH"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@id/walletName"
+            app:layout_constraintTop_toBottomOf="@id/walletName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
